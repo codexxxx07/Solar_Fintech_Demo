@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(120deg, #eef2f3, #e6f7f1);
+  color: #222;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto auto; /* brand | nav | button */
+  align-items: center;
+  padding: 20px 50px;
+  background: #065f46;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  gap: 20px;
+}
+
+header h1 {
+  text-align: center; /* brand perfectly centered */
+  font-size: 28px;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header button.dark-btn {
+  justify-self: end;
+}
+
+
+header h1 {
+  font-size: 22px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #0a8754, #12c2b3);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  border: none;
+  background: white;
+  color: #0a8754;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 30px;
+  width: 260px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Form */
+form {
+  max-width: 420px;
+  margin: auto;
+}
+
+form input, form select, form button {
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #0a8754;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Scroll animation base */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark toggle button */
+.dark-btn {
+  background: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark header {
+  background: #1f1f1f;
+}
+
+body.dark .hero {
+  background: linear-gradient(to right, #0a8754, #065f46);
+}
+
+body.dark .card {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark footer {
+  background: #000;
+}
+
+/* Card hover */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+/* Button hover */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.08);
+  opacity: 0.95;
+}
+
+/* Navbar links hover */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Dark mode hover fix */
+body.dark .card:hover {
+  box-shadow: 0 20px 45px rgba(255,255,255,0.08);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stats h3 {
+  font-size: 26px;
+}
+
+.stats p {
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto auto; /* brand center, nav + button right */
+  align-items: center;
+  padding: 25px 50px; /* extra spacing for balance */
+  gap: 20px;
+  background: #065f46;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-family: 'Segoe UI', 'Helvetica', sans-serif;
+  font-weight: 700;       
+  font-size: 32px;        
+  letter-spacing: 1px;    
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* optional luxury feel */
+  /* Optional gradient for premium look: uncomment below */
+  /* background: linear-gradient(90deg, #10b981, #3dd598);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent; */
+}

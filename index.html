@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solar Fintech Startup</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <header>
+  <h1>Solar Fintech</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#how">How It Works</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button id="darkToggle" class="dark-btn">🌙</button>
+</header>
+    <section id="home" class="hero">
+      <h2>Invest in Solar. Earn Sustainable Returns.</h2>
+      <p>
+        We connect investors with solar projects and share profits
+        transparently.
+      </p>
+      <button onclick="scrollToSection('contact')">Get Started</button>
+    </section>
+    <div class="stats fade-in">
+      <div>
+        <h3>₹5Cr+</h3>
+        <p>Potential Market</p>
+      </div>
+      <div>
+        <h3>25+</h3>
+        <p>Corporate Interest</p>
+      </div>
+      <div>
+        <h3>100%</h3>
+        <p>Clean Energy Focus</p>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section fade-in">
+      <h2>How It Works</h2>
+      <div class="cards">
+        <div class="card fade-in">
+          <h3>☀️ Solar Investment</h3>
+          <p>Users invest in solar projects and receive equity shares.</p>
+        </div>
+
+        <div class="card fade-in">
+          <h3>🏭 Corporate Solar</h3>
+          <p>Solar panels are installed for corporates to generate revenue.</p>
+        </div>
+
+        <div class="card fade-in">
+          <h3>📈 Shared Returns</h3>
+          <p>Revenue is distributed transparently among investors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="section fade-in">
+      <h2>Investor Dashboard (Demo)</h2>
+
+      <div class="cards">
+        <div class="card fade-in">
+          <h3>💰 ₹2,50,000</h3>
+          <p>Total Investment</p>
+        </div>
+
+        <div class="card fade-in">
+          <h3>📊 12%</h3>
+          <p>Estimated Annual Returns</p>
+        </div>
+
+        <div class="card fade-in">
+          <h3>⚡ 150 kW</h3>
+          <p>Solar Capacity Installed</p>
+        </div>
+      </div>
+
+      <!-- CHART -->
+      <div style="max-width: 700px; margin: 50px auto">
+        <canvas id="growthChart"></canvas>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section fade-in">
+      <h2>Join Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <select>
+          <option>Investor</option>
+          <option>Developer</option>
+          <option>Volunteer</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="msg"></p>
+    </section>
+
+    <footer>
+      <p>© 2026 Solar Fintech Startup | Demo MVP</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
