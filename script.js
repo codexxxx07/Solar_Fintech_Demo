@@ -47,3 +47,13 @@ toggle.addEventListener("click", () => {
   toggle.textContent =
     document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
+
+const lotInput = document.getElementById("lots");
+const totalAmount = document.getElementById("totalAmount");
+
+if (lotInput) {
+  lotInput.addEventListener("input", () => {
+    const lots = Number(lotInput.value);
+    totalAmount.innerText = lots > 0 ? lots * 100 : 0;
+  });
+}
