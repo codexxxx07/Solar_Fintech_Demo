@@ -304,9 +304,9 @@ body.dark .card:hover {
 
 header {
   display: grid;
-  grid-template-columns: 1fr auto auto; /* brand center, nav + button right */
+  grid-template-columns: 1fr auto auto; 
   align-items: center;
-  padding: 25px 50px; /* extra spacing for balance */
+  padding: 25px 50px; 
   gap: 20px;
   background: #065f46;
   color: white;
@@ -321,11 +321,7 @@ header h1 {
   font-size: 32px;        
   letter-spacing: 1px;    
   text-align: center;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* optional luxury feel */
-  /* Optional gradient for premium look: uncomment below */
-  /* background: linear-gradient(90deg, #10b981, #3dd598);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent; */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .investment-calculator {
